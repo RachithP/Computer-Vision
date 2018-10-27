@@ -28,7 +28,7 @@ covar3 = covar(:,6:7);
 t=0:0.01:2*pi;
 
 % Rotation matrix is given by R = [cosw -sinw;sinw cosw]. 
-% Finding the angle of rotation by finding the slope of the major axis wrt x-axis
+% Finding the angle of rotation by finding the slope of the major axis (highest lamda value) wrt x-axis
 w1 = atan((V1(2,2)-0)/(V1(1,2)-0));
 
 % Multiply [acos(t); bsin(t)] by R. Taking confidence parameter as 1
