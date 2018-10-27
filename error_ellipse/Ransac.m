@@ -1,5 +1,7 @@
 clear
 tic
+
+% Loading data which has (x,y), x as it's rows and y as its columns.
 load('data\data2.mat');
 x=pts;clear pts;
 
@@ -11,7 +13,7 @@ covar = fliplr((((x-mean(x,2))*fliplr((x-mean(x,2))'))/(length(x)-1)));
 
 % Setting threshold parameters
 delta = 6; % min distance from any point to the line
-epsolon = 100; % min number of points of the dataset that are within delta required to plot the line
+epsolon = 100; % min number of points of the dataset that are within delta required exit the loop
 
 for i=1:200
     a = randi([1, 200]);
