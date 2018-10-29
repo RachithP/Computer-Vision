@@ -1,3 +1,4 @@
+% Implementation of RANSAC algorithm for lien fitting
 clear
 tic
 
