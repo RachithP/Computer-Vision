@@ -1,11 +1,11 @@
 function [output] = cannyEdgeDetector(Image, lowerThreshold, upperThreshold)
 
-upperThreshold = 80;
+upperThreshold = 100;
 lowerThreshold = 20;
-I = imread('cat.jpg');
+Image = imread('zebra.jpg');
 
 % Read Image
-I = rgb2gray(I);
+I = rgb2gray(Image);
 I = double(I);
 
 % Define a Gaussian filter
@@ -35,7 +35,7 @@ figure;imshow((Img));title('Non-max');
 
 % Hysterical thresholding
 output = hystericalThresholding(marker,gradDir,Img,lowerThreshold);
-figure;imshow((output));title('Hysterical thresholding');
+figure;imshowpair(output,Image,'montage');title('CannyEdgeDetector!');
 
 % % local maxima
 % for i = 2:size(output,1)-1

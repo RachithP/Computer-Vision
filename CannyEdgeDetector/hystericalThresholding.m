@@ -1,19 +1,20 @@
 function [marker] = hystericalThresholding(marker,theta,mag,lt)
 
-% marker is the processed image going through nonmaxsup
-% theta is the matrix with angles assigned to each pixel
-% lt is the lower threshold.
+% marker is the processed image from nonMaximalSupression.m
+% theta is the matrix with angles assigned to each pixel ->computeAngle.m
+% 'lt' is the lower threshold.
 
-alter = 1;
+alter = 1;  % This is to keep track of any change in the image. i.e binary
 
 marker = padarray(marker,[3,3]);
 mag = padarray(mag,[3,3]);
 theta = padarray(theta,[3,3]);
+
 [y,x] = size(theta);
 iter = 1;
 
 while alter
-    alter = 0;
+    alter = 0; 
     iter = iter + 1;
     for i = 4:y-3
         for j = 4:x-3
@@ -64,6 +65,7 @@ while alter
     end
 end
 
+% Now all the edges would be marked by 10, hence changing their value to 255(white).
 for i = 2:y-1
     for j = 2:x-1
         if marker(i,j) == 10
