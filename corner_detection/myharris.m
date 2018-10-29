@@ -5,6 +5,8 @@ function [] = myharris(Image, window_size, corner_threshold, N)
 %% 'window_size' of the Gaussian filter applied on the derivative of 'Image' along x and y axis.
 %% 'corner_threhold' to threshold strong corners
 %% 'N' shows only N strong points into consideration
+%% NOTE: Different padding, number of best strong corners, sigma value of gaussian filter may need to be implemented depending on input Image.
+%% The current settings works good for Image '1,jpg'
 
 %   Initializing values which would be taken as input to this function later on
 window_size = 5;
@@ -12,7 +14,7 @@ corner_threshold = 100000; 		% Higher value to filter out only strong corners
 N = 200;				% User defined value.
 
 % Reading Image
-Image = imread('corner.jpg');
+Image = imread('1.jpg');
 I = double(rgb2gray(Image));
 
 % Pad Image
