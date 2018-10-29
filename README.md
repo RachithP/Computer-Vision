@@ -1,2 +1,2 @@
-# CMSC426--Computer-Vision
-Projects done in this course at University of Maryland, College Park.
+# Computer Vision based projects
+Projects done are part of the CMSC426 course at University of Maryland, College Park.
