@@ -1,3 +1,4 @@
+% Least square solution to line fitting.
 clear
 tic
 load('data\data2.mat');
