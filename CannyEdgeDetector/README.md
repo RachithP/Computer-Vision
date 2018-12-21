@@ -1,4 +1,6 @@
-CANNY EDGE DETECTOR...
+# CANNY EDGE DETECTOR...
+
+Author: Rachith Prakash
 
 Hey there folks! 
 
