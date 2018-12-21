@@ -15,7 +15,7 @@ I have already downloaded and unzipped folder of GTSAM toolbox. However, one can
 
 ## Code details
 
-There are two datasets in implementation/code/data
+There are two datasets in /SLAM/implementation/code/data
 
 References: 
 1. https://cmsc426.github.io/sfm
