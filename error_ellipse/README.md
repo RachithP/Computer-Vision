@@ -1,6 +1,8 @@
 # Error Ellipse in 2-D
 
-Author: Rachith Prakash
+**Author**: Rachith Prakash
+
+__Maintainer__ & __Contributer__: Rachith Prakash
 
 Given any 2-D data, e.g x and y coordinates of a set of points in 2-D space, this algorithm plots an error ellipse encompassing the datapoints.
 

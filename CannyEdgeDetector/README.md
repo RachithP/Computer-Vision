@@ -1,6 +1,8 @@
 # Canny Edge Detector
 
-Author: Rachith Prakash
+**Author**: Rachith Prakash
+
+__Maintainer__ & __Contributer__: Rachith Prakash
 
 Hey there folks! 
 
