@@ -1,6 +1,8 @@
 #  Data fitting
 
-Author: Rachith Prakash
+**Author**: Rachith Prakash
+
+__Maintainer__ & __Contributer__: Rachith Prakash
 
 This folder consists of different kinds of line fitting algorithms that can be used when we have 2-D data. Typically, this is useful to find a line which can best fit the data(pass through most data points).
 
