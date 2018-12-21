@@ -1,4 +1,4 @@
-Video SnapCut
+# Video SnapCut
 
 Author: Rachith Prakash
 
