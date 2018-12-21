@@ -1,4 +1,4 @@
-# HARRIS CORNER DETECTION
+# HARRIS Corner Detection
 
 Author: Rachith Prakash
 
