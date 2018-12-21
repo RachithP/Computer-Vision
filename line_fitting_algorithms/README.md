@@ -2,7 +2,7 @@
 
 Author: Rachith Prakash
 
-This folder consists of different kinds of line fitting algorithms that can be used when we have 2-D data. Typically, this is useful to find line which can define the correlation in data.
+This folder consists of different kinds of line fitting algorithms that can be used when we have 2-D data. Typically, this is useful to find a line which can best fit the data(pass through most data points).
 
 The following algorithms are covered.
 
