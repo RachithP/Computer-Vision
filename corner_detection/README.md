@@ -1,6 +1,8 @@
 # HARRIS Corner Detection
 
-Author: Rachith Prakash
+**Author**: Rachith Prakash
+
+__Maintainer__ & __Contributer__: Rachith Prakash
 
 Corner detection is a crucial process in Computer Vision. The corners are regions of large variations in intensity in the neighborhood of the point(pixel) in all directions. Thus, these are very good features to match between similar images.
 
