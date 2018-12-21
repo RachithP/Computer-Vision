@@ -1,6 +1,7 @@
 # SLAM using GTSAM
 
 **Author**: Rachith Prakash
+
 __Contributor__ & __Maintainer__: Rachith Prakash
 
 This project is an implementation of **SLAM**-*Simultaneous Localization and Mapping*, using GTSAM. It is done as part of CMSC426 course at University of Maryland, College Park.
