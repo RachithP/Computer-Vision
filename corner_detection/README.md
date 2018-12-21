@@ -1,3 +1,5 @@
+HARRIS CORNER DETECTION
+
 Corner detection is a crucial process in Computer Vision. The corners are regions of large variations in intensity in the neighborhood of the point(pixel) in all directions. Thus, these are very good features to match between similar images.
 
 This code is an example of Harris corner detection algorithm. I have included the code to compare the results with MATLAB's inbuilt harris corner detection algorithm.
