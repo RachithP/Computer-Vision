@@ -1,7 +1,11 @@
-This folder contains different kinds of line fitting algorithms that can be used when we have a 2-D data. Typically, this is useful to find the direction or line which can define the correlation in data.
+#  Data fitting
 
-Algorithms covered are:
+Author: Rachith Prakash
 
-1. Least Square solution.
-2. RANSAC.
-3. Regularization. Similar to Least Sqaure, but considers noise in the data with a penalizing factor.
+This folder consists of different kinds of line fitting algorithms that can be used when we have 2-D data. Typically, this is useful to find a line which can best fit the data(pass through most data points).
+
+The following algorithms are covered.
+
+1. Linear Least Squares -> solution to AX = b.
+2. RANSAC -> Probabilistic method to fit data. Outlier rejection.
+3. Regularization -> similar to Least Sqaure, but considers noise in data with a penalizing factor. Outlier rejection.
