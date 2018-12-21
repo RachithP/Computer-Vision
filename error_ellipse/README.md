@@ -1,0 +1,1 @@
+Given a 2-D data, e.g x and y coordinates, this algorithm calculates the covariance matrix between them.
