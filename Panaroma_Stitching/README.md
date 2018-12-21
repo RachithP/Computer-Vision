@@ -1,9 +1,8 @@
 # Panaroma Stitching
 
-Author: Rachith Prakash
-Version: MATLAB 2018a.
+Author: Rachith Prakash.
 
-This project is a MATLAB implementation of 2-D Panaroma Stitching. This is part of CMSC426 course at University of Maryland, College Park. 
+This project is a MATLAB (2018a) implementation of 2-D Panaroma Stitching. This is part of CMSC426 course at University of Maryland, College Park. 
 
 Detailed explanation of this project is included in report.pdf. 
 
@@ -17,6 +16,3 @@ Project contains following files:
 6. est_homography.m -> Homopgraphy estimation from matched features coordinates.
 7. apply_homography.m -> apply homography obtained after RANSAC.
 8. showMatchedFeatures.m -> Display matched features in impair 'montage' mode.
-
-
-
