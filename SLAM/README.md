@@ -8,7 +8,7 @@ This project is an implementation of **SLAM**-*Simultaneous Localization and Map
 
 ## GTSAM toolbox installation instructions
 
-I have already downloaded and unzipped folder of GTSAM toolbox. However, one can follow the following instructions to download and install on their own.
+I have already downloaded and unzipped folder of GTSAM [toolbox](https://github.com/RachithP/Computer-Vision/tree/test/SLAM/gtsam-toolbox-3.2.0-win64/gtsam_toolbox) required to run this code. However, one can follow the following instructions to download and install on their own.
 
 1. Download and unzip MATLAB precompiled gtsam-toolbox-3.2.0-win64.zip from [Borg Lab](https://borg.cc.gatech.edu/download.html).
 2. Make sure you can run example files from the toolbox.
