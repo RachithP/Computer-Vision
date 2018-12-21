@@ -1,4 +1,4 @@
-# CANNY EDGE DETECTOR...
+# Canny Edge Detector
 
 Author: Rachith Prakash
 
@@ -19,5 +19,3 @@ The details on the usage and understanding of the first 3 files is provided with
 That being said, the main idea behind the 4th file is to link pixels which are considered weak i.e gradient-magnitude < upper-threshold and gradient-magnitude > lower-threshold, and connect them to a strong pixel i.e. pixel whose gradient-magnitude > upper-threshold in the vicinity along the direction of the edge. This connection happens if and only if ( iff ), the strong pixel and the weak pixel are neighbours and both of them have the same gradient direction. The loop is repeated until all the changes are done i.e. all the linking is done. This is marked by a tracker 'iter'. 
 
 For more details about the concepts related to Canny Edge detector one can refer http://aishack.in/tutorials/implementing-canny-edges-scratch/.
-
-
