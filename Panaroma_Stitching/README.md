@@ -1,6 +1,8 @@
 # Panaroma Stitching
 
-Author: Rachith Prakash.
+**Author**: Rachith Prakash.
+
+__Maintainer__ & __Contributer__: Rachith Prakash
 
 This project is a MATLAB (2018a) implementation of 2-D Panaroma Stitching. This is part of CMSC426 course at University of Maryland, College Park. 
 
