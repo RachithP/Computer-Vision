@@ -6,9 +6,6 @@ tic
 load('data\data2.mat');
 x=pts;clear pts;
 
-% Calculating the co-variance matrix of the data given.
-covar = fliplr((((x-mean(x,2))*fliplr((x-mean(x,2))'))/(length(x)-1)));
-
 % Ransac algorithm
 % Iterate N times -> choosing N sets of 2 random points
 
