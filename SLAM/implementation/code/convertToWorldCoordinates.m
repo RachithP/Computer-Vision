@@ -63,6 +63,7 @@ for count = 1:length(observedlandmarks)
 %              [position3x(POS)'  position3y(POS)' zeros(length(POS),1)];...
 %              [position4x(POS)'  position4y(POS)' zeros(length(POS),1)]];
 
+        % Using inbuilt matlab function to estimate R, T from given image and world coordinates
         [r,t] = estimateWorldCameraPose(x,X,cameraParams);
         
     end

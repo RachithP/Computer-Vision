@@ -6,7 +6,7 @@ function [H,R,T]= estimateTransformations(X,x,K)
 
 % OUTPUT
 % H is the Homography matrix
-% R, T are the rigid body transformations between image frame and world frame
+% R, T are the rigid body transformations(Pose) between image frame and world frame
 
 
 % Solving for Homography. A*h=0;
