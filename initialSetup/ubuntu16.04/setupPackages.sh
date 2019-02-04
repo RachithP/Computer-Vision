@@ -30,7 +30,6 @@ echo "Installing python2.7-dev, python3.5dev and pip"
 sudo apt-get -y install python2.7-dev
 sudo apt-get -y install python3.5-dev
 sudo apt-get -y install python3-pip
-pip3 install --upgrade pip
 
 
 

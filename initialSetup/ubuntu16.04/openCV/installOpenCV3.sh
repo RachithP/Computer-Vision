@@ -1,23 +1,15 @@
 #!/bin/sh
 
-echo "Making Python 3.5 as default"
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.5 1
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 2
-sudo update-alternatives --config python
+#echo "Making Python 3.5 as default"
+#sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.5 1
+#sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 2
+#sudo update-alternatives --config python
 
 ## Installing OpenCV 3.4.0
 
 version=3.4.0
 
 sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove
-
-read -p "Select [1] to install through pip or select [2] to install manually.  [1/2]?" val
-if [ val -eq 1 ]; then
-pip install opencv-python
-pip3 install opencv-python
-
-
-else
 
 echo "NOTE: Uninstallating ffmpeg and x264. They have issues with OpenCV."
 read -p "Press <ENTER> to continue"
@@ -45,7 +37,6 @@ echo "Invalid Input"
 exit
 fi
 
-
 sudo apt-get -y install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
 sudo apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
 sudo apt-get -y install libxvidcore-dev libx264-dev
@@ -54,37 +45,49 @@ sudo apt-get -y install libatlas-base-dev gfortran
 sudo apt-get -y install python2.7-dev
 sudo apt-get -y install python3.5-dev
 
-
 echo -e "Downloading OpenCV $version \n"
 wget -O OpenCV-$version.zip https://astuteinternet.dl.sourceforge.net/project/opencvlibrary/opencv-unix/3.4.0/opencv-3.4.0.zip
 echo "Installing OpenCV" $version
 unzip OpenCV-$version.zip
 
-# echo -e "Downloading opencv contribution packages\n"
-# wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.0.zip
-# unzip opencv_contrib.zip
+#echo -e "Downloading opencv contribution packages\n"
+#wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.0.zip
+#unzip opencv_contrib.zip
 
-echo -e "Installing pip \n"
-sudo apt-get install python-pip && pip install --upgrade pip
-sudo apt-get install python3-pip && pip3 install --upgrade pip3
-
-pip install numpy
-pip3 install numpy
+echo -e "Installing numpy \n"
+sudo pip3 install numpy
 
 maxThreads=$(grep -c ^processor /proc/cpuinfo)
 echo Enter the number of CPU threads you want to use. FYI: You have $maxThreads CPU Threads.
 read nThreads
+
+echo "Using Virtual environment for installating Opencv...Setting up Virtual Environment now..."
+sudo pip3 install virtualenv virtualenvwrapper
+echo "# Virtual Environment Wrapper"  >> ~/.bashrc
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+source ~/.bashrc
+
+echo "Creating virtual environment named 'cv'"
+mkvirtualenv cv -p python3
+workon cv
+pip3 install numpy scipy matplotlib scikit-image scikit-learn ipython
+deactivate
 
 cd opencv-$version
 mkdir build
 cd build
 cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler ..
 make -j$nThreads
-sudo sh -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
 sudo make install
+sudo sh -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
 sudo ldconfig
 
-fi
+echo "Creating symbolic link for virtual env..."
+find /usr/local/lib/ -type f -name "cv2*.so"
+read -p "Assuming python3.5 and proceeding....Press [ENTER] to continue..."
+cd ~/.virtualenvs/cv/lib/python3.5/site-packages
+sudo mv cv2.cpython-35m-x86_64-linux-gnu.so cv2.so
+ln -s /usr/local/lib/python3.5/site-packages/cv2.so cv2.so
 
 echo "Installation done"
 echo ""
