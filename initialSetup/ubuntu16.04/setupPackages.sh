@@ -5,8 +5,6 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get -y install git
 
-restart
-
 echo "Cloning Computer-Vision github repo..."
 mkdir -p ~/git
 cd ~/git
