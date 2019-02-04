@@ -19,11 +19,18 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt update
 sudo apt-get -y install sublime-text
 
-echo "Installing nvidia driver 410 (Latest as of Feb-03-2019)..."
-sudo apt-get purge nvidia*
-sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt update
-sudo apt-get -y install nvidia-410
+# Skipping this due to issues
+#echo "Installing nvidia driver 410 (Latest as of Feb-03-2019)..."
+#sudo apt-get purge nvidia*
+#sudo add-apt-repository ppa:graphics-drivers/ppa
+#sudo apt update
+#sudo apt-get -y install nvidia-410
+
+echo "Installing python2.7-dev, python3.5dev and pip"
+sudo apt-get -y install python2.7-dev
+sudo apt-get -y install python3.5-dev
+sudo apt-get -y install python3-pip
+pip3 install --upgrade pip
 
 
 
