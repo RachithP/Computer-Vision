@@ -32,7 +32,7 @@ echo "1. sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg
 read -p "Do you want to continue? [y/n]" str
 if [ "$str" = "n" ]; then
 exit 
-elif [! "$str" = "n" || "$str" = "y" ]; then
+elif ! [ "$str" = "n" || "$str" = "y" ]; then
 echo "Invalid Input"
 exit
 fi
@@ -54,7 +54,7 @@ unzip OpenCV-$version.zip
 #wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.0.zip
 #unzip opencv_contrib.zip
 
-echo -e "Installing numpy \n"
+#echo -e "Installing numpy \n"
 sudo pip3 install numpy
 
 maxThreads=$(grep -c ^processor /proc/cpuinfo)
@@ -64,6 +64,7 @@ read nThreads
 echo "Using Virtual environment for installating Opencv...Setting up Virtual Environment now..."
 sudo pip3 install virtualenv virtualenvwrapper
 echo "# Virtual Environment Wrapper"  >> ~/.bashrc
+export WORKON_HOME=$HOME/.virtualenvs
 echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
 source ~/.bashrc
 
@@ -82,12 +83,13 @@ sudo make install
 sudo sh -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
 sudo ldconfig
 
-echo "Creating symbolic link for virtual env..."
-find /usr/local/lib/ -type f -name "cv2*.so"
-read -p "Assuming python3.5 and proceeding....Press [ENTER] to continue..."
-cd ~/.virtualenvs/cv/lib/python3.5/site-packages
-sudo mv cv2.cpython-35m-x86_64-linux-gnu.so cv2.so
-ln -s /usr/local/lib/python3.5/site-packages/cv2.so cv2.so
+# echo "Creating symbolic link for virtual env..."
+# find /usr/local/lib/ -type f -name "cv2*.so"
+# read -p "Assuming python3.5 and proceeding....Press [ENTER] to continue..."
+# cd /usr/local/lib/python3.5/dist-packages/
+# sudo mv cv2.cpython-35m-x86_64-linux-gnu.so cv2.so
+# cd ~/.virtualenvs/cv/lib/python3.5/site-packages
+# ln -s /usr/local/lib/python3.5/dist-packages/cv2.so cv2.so
 
 echo "Installation done"
 echo ""
@@ -95,10 +97,7 @@ echo "Test by running python/python3"
 echo "import cv2"
 echo "cv2.__version__"
 
-
-
-
-
-
-
-
+## Installting Cuda 9.0 for nvidia 396/384 -- cudnn 7.4 works with this
+# https://medium.com/@zhanwenchen/install-cuda-and-cudnn-for-tensorflow-gpu-on-ubuntu-79306e4ac04e
+# or
+# system setup installation by cmsc733

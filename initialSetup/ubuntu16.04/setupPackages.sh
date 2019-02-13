@@ -5,10 +5,10 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get -y install git
 
-echo "Cloning Computer-Vision github repo..."
-mkdir -p ~/git
-cd ~/git
-git clone https://github.com/RachithP/Computer-Vision.git
+#echo "Cloning Computer-Vision github repo..."
+#mkdir -p ~/git
+#cd ~/git
+#git clone https://github.com/RachithP/Computer-Vision.git
 
 cd ~
 echo "Installing sublime-text 3..."
