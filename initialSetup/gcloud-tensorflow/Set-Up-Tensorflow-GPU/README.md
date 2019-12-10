@@ -20,3 +20,5 @@ Step-3. Download https://developer.nvidia.com/compute/machine-learning/cudnn/sec
 Step-4. From your `<any_folder>`, run the following command:
 
 `./script_2.sh`
+
+Step-5. Run `source activate tf` . Then once you enter the conda environment, run `pip install -r requirements.txt`.
