@@ -22,3 +22,9 @@ Step-4. From your `<any_folder>`, run the following command:
 `./script_2.sh`
 
 Step-5. Run `source activate tf` . Then once you enter the conda environment, run `pip install -r requirements.txt`.
+
+Step-5. Verify that tensorflow-gpu is being used by your instance. Follow the below steps:
+- Run `python`
+- `import tensorflow as tf`
+- `sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))`
+- You should see your GPU information along with the total memory available and memory free, etc
