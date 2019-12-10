@@ -1,7 +1,7 @@
 # Set-Up-Tensorflow-GPU
 ## CuDNN and Cuda version are tested with Tesla K80 GPU only! - Nvidia driver version 384.13
 
-In this guide, I will show a 4-steps process of quickly setting up and running the Tensorflow GPU on google cloud instance. The same 4-steps process is also applicable for any other virtual machine instances deployed on any other cloud computing platform such as AWS, Paperspace, Digitial Ocean etc.
+In this guide, I will show a 6-steps process of quickly setting up and running the Tensorflow GPU on google cloud instance. The same 4-steps process is also applicable for any other virtual machine instances deployed on any other cloud computing platform such as AWS, Paperspace, Digitial Ocean etc.
 
 Step-1;
 - Start your VM instance and log-in to it using your terminal.
@@ -21,9 +21,9 @@ Step-4. From your `<any_folder>`, run the following command:
 
 `./script_2.sh`
 
-Step-5. Run `source activate tf` . Then once you enter the conda environment, run `pip install -r requirements.txt`.
+Step-5. Run `source activate tf` . Then once you enter the conda environment, run `pip install -r requirements.txt`. 
 
-Step-5. Verify that tensorflow-gpu is being used by your instance. Follow the below steps:
+Step-6. Verify that tensorflow-gpu is being used by your instance. Follow the below steps:
 - Run `python`
 - `import tensorflow as tf`
 - `sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))`
