@@ -15,6 +15,7 @@ Step-2. From your `<any_folder>` directory, run the LINUX shell file "script_1.s
 
 Step-3. Download https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.0.5/prod/9.0_20171129/cudnn-9.0-linux-x64-v7 by logging into your nvidia-developer account(if you don't have one, create one! - it's free!!)
 - Make sure you have the file in your `<any_folder>` folder.
+- Don't worry about extracting the compressed file. It is taken care by `script_2.sh`
 
 Step-4. From your `<any_folder>`, run the following command:
 
