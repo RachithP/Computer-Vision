@@ -1,5 +1,5 @@
 # Set-Up-Tensorflow-GPU
-## CuDNN and Cuda version are tested with Tesla K80 GPU only!
+## CuDNN and Cuda version are tested with Tesla K80 GPU only! - Nvidia driver version 384.13
 
 In this guide, I will show a 4-steps process of quickly setting up and running the Tensorflow GPU on google cloud instance. The same 4-steps process is also applicable for any other virtual machine instances deployed on any other cloud computing platform such as AWS, Paperspace, Digitial Ocean etc.
 
