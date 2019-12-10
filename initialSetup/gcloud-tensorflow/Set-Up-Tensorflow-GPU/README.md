@@ -9,7 +9,7 @@ Step-1;
 - Simply create files as in this folder, namely `script_1.sh`, `script_2.sh` and `requirements.txt` and paste in the appropriate commands in each file to their respective files.
 - Don't forget to give executable permission for script files -> `chmod a+x script_1.sh script_2.sh`
 
-Step-2. From your "home" directory, run the LINUX shell file "script_1.sh" using command as shown below:
+Step-2. From your `<any_folder>` directory, run the LINUX shell file "script_1.sh" using command as shown below:
 
 `./script_1.sh`
 
