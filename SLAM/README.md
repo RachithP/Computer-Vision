@@ -20,11 +20,11 @@ There are two datasets [here](https://github.com/RachithP/Computer-Vision/tree/m
 
 The project includes the following files:
 
-1. [Wrapper.m](https://github.com/RachithP/Computer-Vision/blob/test/SLAM/implementation/code/Wrapper.m)
-2. [SLAMusingGTSAM.m](https://github.com/RachithP/Computer-Vision/blob/test/SLAM/implementation/code/SLAMusingGTSAM.m)
-3. [estimateTransformations.m](https://github.com/RachithP/Computer-Vision/blob/test/SLAM/implementation/code/estimateTransformations.m)
-4. [converToWorldCoordinates.m](https://github.com/RachithP/Computer-Vision/blob/test/SLAM/implementation/code/convertToWorldCoordinates.m)
-5. [getX](https://github.com/RachithP/Computer-Vision/blob/test/SLAM/implementation/code/getX.m)
+1. [Wrapper.m](https://github.com/RachithP/Computer-Vision/blob/master/SLAM/implementation/code/Wrapper.m)
+2. [SLAMusingGTSAM.m](https://github.com/RachithP/Computer-Vision/blob/master/SLAM/implementation/code/SLAMusingGTSAM.m)
+3. [estimateTransformations.m](https://github.com/RachithP/Computer-Vision/blob/master/SLAM/implementation/code/estimateTransformations.m)
+4. [converToWorldCoordinates.m](https://github.com/RachithP/Computer-Vision/blob/master/SLAM/implementation/code/convertToWorldCoordinates.m)
+5. [getX](https://github.com/RachithP/Computer-Vision/blob/master/SLAM/implementation/code/getX.m)
 
 
 References: 
