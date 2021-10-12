@@ -4,4 +4,4 @@ numpy==1.14
 scikit-learn==0.18.1
 python-gflags
 h5py
-opencv-python==3.1.0
+opencv-python==4.2.0.32
